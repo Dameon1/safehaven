@@ -1,16 +1,16 @@
 //===============================================================================================
 //getting data from the users from the website
 var registerVolunteer = function () {
-  var name = $("#vol-name")
-  var email = $("#vol-email")
-  var phone = $("#vol-phone")
-  var region = $("#vol-region")
+  var name = $("#vol-first-name").val().trim() + " " + $("#vol-last-name").val().trim()
+  var email = $("#vol-email").val().trim()
+  var phone = $("#vol-phone").val().trim()
+  var region = $("#vol-region").val().trim()
   var times = {
-    monday: [$("#mon-morn"), $("#mon-after")],
-    tuesday: [$("#tues-morn"), $("#tues-after")],
-    wednesday: [$("#wed-morn"), $("#wed-after")],
-    thursday: [$("#thurs-morn"), $("#thurs-after")],
-    friday: [$("#fri-morn"), $("#fri-after")]
+    monday: [$("#mon-morn").is(':checked'), $("#mon-after").is(':checked')],
+    tuesday: [$("#tues-morn").is(':checked'), $("#tues-after").is(':checked')],
+    wednesday: [$("#wed-morn").is(':checked'), $("#wed-after").is(':checked')],
+    thursday: [$("#thurs-morn").is(':checked'), $("#thurs-after").is(':checked')],
+    friday: [$("#fri-morn").is(':checked'), $("#fri-after").is(':checked')]
     //Not avaliale on weekends
     // saturday: [$("#sat-morn"), $("#sat-after")],
     // sunday: [$("#sun-morn"), $("#sun-after")]
@@ -25,10 +25,10 @@ var registerVolunteer = function () {
 }
 
 var askForRide = function () {
-  var region = $("#apl-region")
-  var email = $("#apl-email")
-  var date = $("#apl-date")
-  var timeOfDay = $("#apl-time")
+  var region = $("#apl-address").val().trim()
+  var email = $("#apl-email").val().trim()
+  var date = $("#apl-date").val().trim()
+  var timeOfDay = $("#apl-time").val().trim()
 
   return {
     email: email,
