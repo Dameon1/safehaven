@@ -11,9 +11,6 @@ var registerVolunteer = function () {
     wednesday: [$("#wed-morn").is(':checked'), $("#wed-after").is(':checked')],
     thursday: [$("#thurs-morn").is(':checked'), $("#thurs-after").is(':checked')],
     friday: [$("#fri-morn").is(':checked'), $("#fri-after").is(':checked')]
-    //Not avaliale on weekends
-    // saturday: [$("#sat-morn"), $("#sat-after")],
-    // sunday: [$("#sun-morn"), $("#sun-after")]
   }
   return {
     name: name,

@@ -7,3 +7,6 @@ div {
 .form-group {
 	text-align: left;
 }
+.form-check-inline {
+	float: right;
+}
