@@ -1,5 +1,11 @@
 var server = require('diet')
 
+try {
+	require('dotenv').config()
+} catch (e) {
+	// not installed in prod
+}
+
 var logger       = require('morgan')
 var session      = require('express-session')
 var SessionStore = require('express-nedb-session')(session)
@@ -9,6 +15,7 @@ var serve        = require('express-static')
 				  require('./lib/models')
 var drivers     = require('./lib/drivers')
 var auth        = require('./lib/auth')({authenticate: drivers.authenticate})
+var mailer      = require('./lib/mailer')
 
 var app = server()
 
@@ -43,5 +50,7 @@ app.post('/register/', function ($) {
 	console.log($.body)
 	$.end('thanks')
 })
+
+mailer.sendEmail('fuuuuuuuck')
 
 module.exports = app
