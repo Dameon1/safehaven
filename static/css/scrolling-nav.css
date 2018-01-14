@@ -1,0 +1,66 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+
+.dark-bluish-green{
+  background-color: #0068B2;
+}
+
+.light-bluish-green{
+  background-color: #2EA7FF;
+}
+
+
+.connect-button1{
+	  background-color: #0068B2;
+	  color: white;
+	  margin-right: 50px;
+	  height: 50px;
+}
+
+.connect-button2{
+	  background-color: #0068B2;
+	  color: white;
+	  height: 50px;
+}
+
+.button-div{
+	width: 100%;
+}
+
+.connect-button1.col-sm-12{
+	margin-bottom: 5px;
+}
+
+.card{
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+}
+
+.card_holder{
+	/*border: 2px solid red;*/
+	max-width: 100%;
+}
+
+.container.you{
+	/*border: 2px solid blue;*/
+	max-width: 90%;
+	height: 90%;
+}

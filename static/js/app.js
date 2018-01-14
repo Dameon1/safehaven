@@ -12,13 +12,13 @@ var registerVolunteer = function () {
     thursday: [$("#thurs-morn").is(':checked'), $("#thurs-after").is(':checked')],
     friday: [$("#fri-morn").is(':checked'), $("#fri-after").is(':checked')]
   }
-  return {
+  axios.post('/register/', {
     name: name,
     email: email,
     phone: phone,
     region: region,
     times: times
-  }
+  }).then(fuck => console.log(fuck, 'you'))
 }
 
 var askForRide = function () {
@@ -27,12 +27,12 @@ var askForRide = function () {
   var date = $("#apl-date").val().trim()
   var timeOfDay = $("#apl-time").val().trim()
 
-  return {
+  axios.post('/register/', {
     email: email,
     region: region,
     date: date,
     timeOfDay: timeOfDay
-  }
+  }).then(fuck => console.log(fuck, 'you'))
 }
 
 // getting data from the users from the website
