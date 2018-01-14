@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Some Title</title>
+    <title>loveConnect</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,20 +23,23 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg dark-bluish-green navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Title</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">loveConnect</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+           <!--  <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#">Volunteer</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#connect">Connect</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Apply</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -51,6 +54,116 @@
     </header>
 
     <section id="about">
+      <div class="container you">
+          <div class="mx-auto card_holder">
+
+            <div class="row">
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">Who we are</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">What we trying to do</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">Why we are doing it</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            </div>
+
+
+          </div>
+        </div>
+    </section>
+
+    <section id="connect" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Connect</h2>
+            <p class="lead">For Drivers to sign-up, and Riders to seek.</p>
+            <div class="row">
+              <div class="button-div">
+                  <button type="button" class="btn btn-lg connect-button1 col-sm-12 col-lg-5" data-toggle="modal" data-target="#apply-ride">Connect with Driver</button>
+                  <button type="button" class="btn btn-lg connect-button2 col-sm-12 col-lg-5">Connect with Rider</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+        <!-- Applicant Form Modal -->
+    <div class="modal fade" id="apply-ride" tabindex="-1" role="dialog" aria-labelledby="apply-ride" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="applicant-form">Apply for Transport</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="apl-email">Email Address</label>
+                <input type="email" class="form-control" id="apl-email" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="apl-address">Address of Pick-Up</label>
+                <input type="text" class="form-control" id="apl-address" placeholder="ex..123 Example St. City, ST">
+              </div>
+
+              <div class="form-group">
+                <label for="clinic-address">Address of Clinic</label>
+                <input type="text" class="form-control" id="clinic-address" placeholder="ex..123 Example St. City, ST">
+              </div>
+
+              <div class="form-group">
+                <label for="apl-date">Appointment Date</label>
+                <input type="date" class="form-control" id="apl-date" >
+              </div>
+              <div class="form-group">
+                <label for="apl-time">Morning or Afternoon</label>
+                <select class="form-control" id="apl-time">
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Connect</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -63,30 +176,7 @@
               <li><a href="http://accesswhj.org">Womens Health Justice</a></li>
               <li><a href="https://exhaleprovoice.org/">Pro-Voice Community</a></li>
               <li><a href="http://menandabortion.com/">Mens' Services</a></li>
-             
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Services we offer</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
           </div>
         </div>
       </div>
