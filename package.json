@@ -20,6 +20,7 @@
     "diet": "^0.16.0"
   },
   "dependencies": {
+    "md5": "^2.2.1",
     "axios": "^0.17.1",
     "diet-connect": "^1.2.0",
     "express-nedb-session": "^0.1.1",
