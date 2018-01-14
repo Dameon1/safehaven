@@ -25,3 +25,16 @@ section {
 .light-bluish-green{
   background-color: #2EA7FF;
 }
+
+.login{
+  float: right;
+  max-height: 300px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.registration{
+  float: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

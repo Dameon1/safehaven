@@ -12,13 +12,13 @@ var registerVolunteer = function () {
     thursday: [$("#thurs-morn").is(':checked'), $("#thurs-after").is(':checked')],
     friday: [$("#fri-morn").is(':checked'), $("#fri-after").is(':checked')]
   }
-  return {
+  axios.post('/register/', {
     name: name,
     email: email,
     phone: phone,
     region: region,
     times: times
-  }
+  }).then(function (response) { console.log('ok')})
 }
 
 var askForRide = function () {
