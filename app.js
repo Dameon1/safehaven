@@ -4,11 +4,9 @@ var logger       = require('morgan')
 var session      = require('express-session')
 var SessionStore = require('express-nedb-session')(session)
 var compatible   = require('diet-connect')
-var Router       = require('diet-router')
-var ect          = require('diet-ect')
 var serve        = require('express-static')
 
-var models      = require('./lib/models')
+				  require('./lib/models')
 var drivers     = require('./lib/drivers')
 var auth        = require('./lib/auth')({authenticate: drivers.authenticate})
 
@@ -28,15 +26,9 @@ app.header(compatible(session({
 	store: new SessionStore({filename: app.path + '/db/session.db'})
 })));
 
-app.header(ect({path: app.path + '/views'}))
-
 app.header(auth.session)
 
 app.footer(compatible(serve(app.path + '/static')))
-
-Router.extend(app)
-
-// TODO ROUTES
 
 app.get('/', function ($) {
 	$.sendFile('index.html')
@@ -44,6 +36,12 @@ app.get('/', function ($) {
 
 app.post('/schedule/', function ($) {
 	console.log($.body)
+	$.end('thanks')
+})
+
+app.post('/register/', function ($) {
+	console.log($.body)
+	$.end('thanks')
 })
 
 module.exports = app
