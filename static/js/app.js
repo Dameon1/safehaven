@@ -4,54 +4,51 @@ var registerVolunteer = function () {
   var name = $("#vol-first-name").val().trim() + " " + $("#vol-last-name").val().trim()
   var email = $("#vol-email").val().trim()
   var phone = $("#vol-phone").val().trim()
+  var password = $("#vol-password").val().trim()
   var region = $("#vol-region").val().trim()
-  var times = {
-    monday: [$("#mon-morn").is(':checked'), $("#mon-after").is(':checked')],
-    tuesday: [$("#tues-morn").is(':checked'), $("#tues-after").is(':checked')],
-    wednesday: [$("#wed-morn").is(':checked'), $("#wed-after").is(':checked')],
-    thursday: [$("#thurs-morn").is(':checked'), $("#thurs-after").is(':checked')],
-    friday: [$("#fri-morn").is(':checked'), $("#fri-after").is(':checked')]
+  var availability = {
+    monday: [$("#mon-morn").is(':checked') * 1, $("#mon-after").is(':checked') * 1],
+    tuesday: [$("#tues-morn").is(':checked') * 1, $("#tues-after").is(':checked') * 1],
+    wednesday: [$("#wed-morn").is(':checked') * 1, $("#wed-after").is(':checked') * 1],
+    thursday: [$("#thurs-morn").is(':checked') * 1, $("#thurs-after").is(':checked') * 1],
+	friday: [$("#fri-morn").is(':checked') * 1, $("#fri-after").is(':checked') * 1]
   }
-  axios.post('/register/', {
+  axios.post('/register', {
     name: name,
     email: email,
     phone: phone,
+	password: password,
     region: region,
-    times: times
-  }).then(fuck => console.log(fuck, 'you'))
+    availability: availability
+  }).then(message => {
+	$('#email-signon').val(email)
+	$('#driverLoginPass').val(password)
+	$('#driverLoginSubmit').click()
+  })
 }
 
 var askForRide = function () {
   var region = $("#apl-address").val().trim()
   var email = $("#apl-email").val().trim()
   var date = $("#apl-date").val().trim()
+  var clinic = $("#clinic-address").val().trim()
   var timeOfDay = $("#apl-time").val().trim()
 
-  axios.post('/register/', {
+  axios.post('/schedule', {
     email: email,
     region: region,
     date: date,
+	clinic: clinic,
     timeOfDay: timeOfDay
-  }).then(fuck => console.log(fuck, 'you'))
+  }).then(message => {
+	 console.log(message)
+  })
 }
 
-var driverLogin = function () {
-  var email = $("#email-signon").val().trim()
-  var password = $("#driverLoginPass").val().trim()
-
-  axios.post('/register/', {
-    email: email,
-    password: password
-  }).then(pottymouth => console.log(fuck, 'you'))
-}
-
-
-$("#submitApplicant").on("click", askForRide());
+$("#submitApplicant").on("click", askForRide);
 
 //add main page redirect for volunteers using  window.location.href
-$("#volunteerSubmit").on("click", registerVolunteer());
-
-$("#driverLoginSubmit").on("click", driverLogin());
+$("#volunteerSubmit").on("click", registerVolunteer);
 
 
 // getting data from the users from the website

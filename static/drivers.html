@@ -66,11 +66,16 @@
                                 <input type="text" class="form-control" id="vol-last-name" placeholder="Last Name">
                               </div>
                             </div>
-                            <div class="form-group">
-                              <label for="vol-region">Location</label>
-                              <input type="text" class="form-control" id="vol-region" placeholder="City, ST">
-              
-                            </div>
+                            <div class="form-row">
+															<div class="form-group col-md-6">
+																<label for="vol-region">Location</label>
+																<input type="text" class="form-control" id="vol-region" placeholder="City, ST">
+															</div>
+															<div class="form-group col-md-6">
+																<label for="vol-password">Password</label>
+																<input type="password" class="form-control" id="vol-password">
+															</div>
+														</div>
                             <div class="form-group">
                               <label for="vol-email">Email Address</label>
                               <input type="text" class="form-control" id="vol-email" placeholder="name@example.com">
@@ -138,19 +143,19 @@
                                 <label class="form-check-label" for="fri-after">Afternoon</label>
                               </div>
                             </div>
-                          <button type="submit" id="volunteerSubmit" class="btn btn-primary">Submit</button>
+                          <button type="button" id="volunteerSubmit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                   <div class="col-lg-4 col-sm-10 border ml-lg-4 login">
-                      <form>
+                      <form action="/login" method="post">
                           <div class="form-group">
                             <label for="email-signon">Email address</label>
-                            <inputtype="email" class="form-control" id="email-signon" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email-signon" aria-describedby="emailHelp" placeholder="Enter email" name="username">
                             <small id="emailHelp" id="driverLogin" class="form-text text-muted">login with your email address</small>
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" id="driverLoginPass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" id="driverLoginPass" class="form-control" name="password" placeholder="Password">
                           </div>
                           <button type="submit" id="driverLoginSubmit" class="btn btn-primary">Submit</button>
                       </form>
@@ -159,7 +164,6 @@
             </div>
           </section>
 
-<script src="js/app.js"> </script>
 
     <!-- Footer -->
     <footer class="py-5 dark-bluish-green">
@@ -175,9 +179,13 @@
       
           <!-- Plugin JavaScript -->
           <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+					<!-- Plugin AXIOS -->
+					<script src="vendor/axios/axios.js"></script>
       
           <!-- Custom JavaScript for this theme -->
           <script src="js/scrolling-nav.js"></script>
+					<script src="js/app.js"> </script>
       
         </body>
       
