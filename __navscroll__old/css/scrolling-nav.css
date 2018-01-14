@@ -26,18 +26,6 @@ section {
   background-color: #2EA7FF;
 }
 
-.login{
-  float: right;
-  max-height: 300px;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.registration{
-  float: left;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
 
 .connect-button1{
 	  background-color: #0068B2;
@@ -63,7 +51,8 @@ section {
 .card{
 	margin-left: auto;
 	margin-right: auto;
-	height: 300px;
+	height: 250px;
+color: #2EA7FF;
 }
 
 .card_holder{

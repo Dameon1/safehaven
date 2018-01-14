@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ride Safe</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-    crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
+    <title>loveConnect</title>
 
-<div class="p-3 mb-2 bg-info text-white">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Volunteering</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Scheduling</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Partner Links</a>
-        <!-- </li>git -->
-      </ul>
-    </div>
-  </nav>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- App information -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Ride Safe</h1>
-        <div>Offering a safe, and descrete, free ride to those in need of some understanding.</div>
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg dark-bluish-green navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">loveConnect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+           <!--  <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#">Volunteer</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#connect">Connect</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
 
-
-
-
-
-	<div id="footer" class="row border p-3 mb-2 bg-info text-white">
-    	<div class="col-sm-12">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-vol">
-          Become a volunteer Driver
-        </button> 
+    <header class="light-bluish-green text-white">
+      <div class="container text-center">
+        <h1>Safely, Securely, and Free.</h1>
+        <p class="lead">A ride for those in need of some understanding.</p>
       </div>
-    </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-vol">
-      Apply to be a Volunteer Driver
-    </button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#apply-ride">
-      Schedule a Ride
-    </button>
+    </header>
+
+    <section id="about">
+      <div class="container you">
+          <div class="mx-auto card_holder">
+
+            <div class="row">
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">Who we are</h5>
+                <p class="card-text">A group of caring volunteers that understand being without the ability to get to and from
+                  the proper medical care can be a burden.</p>
+              </div>
+            </div>
+
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">What we trying to do</h5>
+                <p class="card-text">Helping connect volunteers with applicants that need help travelling to and from an early termination.</p>
+              </div>
+            </div>
+
+            <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
+              <div class="card-body">
+                <h5 class="card-title">Why we are doing it</h5>
+                <p class="card-text">To give every woman the ability to get medical care, regardless of distance and lack of transportation.</p>
+              </div>
+            </div>
+            </div>
 
 
+          </div>
+        </div>
+    </section>
 
-    <!-- Applicant Form Modal -->
+    <section id="connect" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Connect</h2>
+            <p class="lead">For Drivers to sign-up, and Riders to seek.</p>
+            <div class="row">
+              <div class="button-div">
+                  <button type="button" class="btn btn-lg connect-button1 col-sm-12 col-lg-5" data-toggle="modal" data-target="#apply-ride">Connect with Driver</button>
+                  <a href="drivers.html"><button type="button" class="btn btn-lg connect-button2 col-sm-12 col-lg-5">Connect with Rider</button></a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Applicant Form Modal -->
     <div class="modal fade" id="apply-ride" tabindex="-1" role="dialog" aria-labelledby="apply-ride" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -86,6 +123,12 @@
                 <label for="apl-address">Address of Pick-Up</label>
                 <input type="text" class="form-control" id="apl-address" placeholder="ex..123 Example St. City, ST">
               </div>
+
+              <div class="form-group">
+                <label for="clinic-address">Address of Clinic</label>
+                <input type="text" class="form-control" id="clinic-address" placeholder="ex..123 Example St. City, ST">
+              </div>
+
               <div class="form-group">
                 <label for="apl-date">Appointment Date</label>
                 <input type="date" class="form-control" id="apl-date" >
@@ -101,118 +144,76 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Connect</button>
+            <button id="submitApplicant" type="button" class="btn btn-primary">Connect</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Volunteer Form Modal  -->
-    <div class="modal fade text-dark" id="register-vol" tabindex="-1" role="dialog" aria-labelledby="register-vol" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="register-volunteer">Register as Volunteer Driver</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="vol-first-name">First Name</label>
-                  <input type="text" class="form-control" id="vol-first-name" placeholder="First Name">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="vol-last-name">Last Name</label>
-                  <input type="text" class="form-control" id="vol-last-name" placeholder="Last Name">
-                </div>
-              </div>
 
 
-              <div class="form-group">
-                <label for="vol-region">Location</label>
-                <input type="text" class="form-control" id="vol-region" placeholder="City, ST">
 
-              </div>
-              <div class="form-group">
-                <label for="vol-email">Email Address</label>
-                <input type="text" class="form-control" id="vol-email" placeholder="name@example.com">
-              </div>
 
-              <div class="form-group">
-                <label for="vol-phone">Phone Number</label>
-                <input type="number" class="form-control" id="vol-phone" placeholder="123-456-7890">
 
-              </div>
-              <!-- Problem Here -->
-              <label>Days You Can Volunteer</label>
-              <div class="form-group">
-                <label class="form-check-label ml-md-3 h5">Monday</label>
-                <div class="form-check form-check-inline ml-md-5">
-                  <input class="form-check-input" type="checkbox" id="mon-morn">
-                  <label class="form-check-label" for="mon-morn">Morning</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="mon-after">
-                  <label class="form-check-label" for="mon-after">Afternoon</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-check-label ml-md-3 h5">Tuesday</label>
-                <div class="form-check form-check-inline ml-md-5">
-                  <input class="form-check-input" type="checkbox" id="tues-morn">
-                  <label class="form-check-label" for="tues-morn">Morning</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="tues-after">
-                  <label class="form-check-label" for="tues-after">Afternoon</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-check-label ml-md-3 h5">Wednesday</label>
-                <div class="form-check form-check-inline ml-md-5">
-                  <input class="form-check-input" type="checkbox" id="wed-morn">
-                  <label class="form-check-label" for="wed-morn">Morning</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="wed-after">
-                  <label class="form-check-label" for="wed-after">Afternoon</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-check-label ml-md-3 h5">Thursday</label>
-                <div class="form-check form-check-inline ml-md-5">
-                  <input class="form-check-input" type="checkbox" id="thurs-morn">
-                  <label class="form-check-label" for="thurs-morn">Morning</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="thurs-after">
-                  <label class="form-check-label" for="thurs-after">Afternoon</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-check-label ml-md-3 h5">Friday</label>
-                <div class="form-check form-check-inline ml-md-5">
-                  <input class="form-check-input" type="checkbox" id="fri-morn">
-                  <label class="form-check-label" for="fri-morn">Morning</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="fri-after">
-                  <label class="form-check-label" for="fri-after">Afternoon</label>
-                </div>
-              </div>
 
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+
+
+
+
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>To help aid you through a tough decision.</h2>
+            <p class="lead">We've organized something helpful below:</p>
+            <ul>
+              <li><a href="https://www.plannedparenthood.org/">Planned Parenthood</a></li>
+              <li><a href="https://abortionfunds.org/need-abortion/">Help with funding</a></li>
+              <li><a href="https://prochoice.org/think-youre-pregnant/find-a-provider/">Find a Provider</a></li>
+              <li><a href="http://accesswhj.org">Womens Health Justice</a></li>
+              <li><a href="https://exhaleprovoice.org/">Pro-Voice Community</a></li>
+              <li><a href="http://menandabortion.com/">Mens' Services</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 dark-bluish-green">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright @loveMovement 2018</p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Plugin AXIOS -->
+    <script src="vendor/axios/axios.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+		<!-- app.js -->
+    <script src="js/app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>

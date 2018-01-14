@@ -18,7 +18,7 @@ var registerVolunteer = function () {
     phone: phone,
     region: region,
     times: times
-  }).then(function (response) { console.log('ok')})
+  }).then(fuck => console.log(fuck, 'you'))
 }
 
 var askForRide = function () {
@@ -27,13 +27,20 @@ var askForRide = function () {
   var date = $("#apl-date").val().trim()
   var timeOfDay = $("#apl-time").val().trim()
 
-  return {
+  axios.post('/register/', {
     email: email,
     region: region,
     date: date,
     timeOfDay: timeOfDay
-  }
+  }).then(fuck => console.log(fuck, 'you'))
 }
+
+$("#submitApplicant").on("click", askForRide());
+
+$("#volunteerSubmit").on("click", registerVolunteer());
+
+
+
 
 // getting data from the users from the website
 //====================================================================================
