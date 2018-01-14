@@ -49,8 +49,12 @@ app.post('/schedule/', function ($) {
 app.post('/register/', function ($) {
 	console.log($.body)
 	$.end('thanks')
+	// register new driver
 })
 
-mailer.sendEmail('fuuuuuuuck')
+app.post('/confirm/', function ($) {
+	console.log($.body)
+	$.end('whatever')
+})
 
 module.exports = app

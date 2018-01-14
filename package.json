@@ -20,6 +20,7 @@
     "diet": "^0.16.0"
   },
   "dependencies": {
+    "md5": "^2.2.1",
     "nodemailer": "^4.4.1"
   }
 }
