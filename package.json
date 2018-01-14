@@ -18,5 +18,8 @@
   "homepage": "https://github.com/cutejs/safehaven#readme",
   "devDependencies": {
     "diet": "^0.16.0"
+  },
+  "dependencies": {
+    "nodemailer": "^4.4.1"
   }
 }
