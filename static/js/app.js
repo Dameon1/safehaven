@@ -35,11 +35,23 @@ var askForRide = function () {
   }).then(fuck => console.log(fuck, 'you'))
 }
 
+var driverLogin = function () {
+  var email = $("#email-signon").val().trim()
+  var password = $("#driverLoginPass").val().trim()
+
+  axios.post('/register/', {
+    email: email,
+    password: password
+  }).then(pottymouth => console.log(fuck, 'you'))
+}
+
+
 $("#submitApplicant").on("click", askForRide());
 
+//add main page redirect for volunteers using  window.location.href
 $("#volunteerSubmit").on("click", registerVolunteer());
 
-
+$("#driverLoginSubmit").on("click", driverLogin());
 
 
 // getting data from the users from the website
