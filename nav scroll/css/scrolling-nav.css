@@ -38,3 +38,41 @@ section {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
+.connect-button1{
+	  background-color: #0068B2;
+	  color: white;
+	  margin-right: 50px;
+	  height: 50px;
+}
+
+.connect-button2{
+	  background-color: #0068B2;
+	  color: white;
+	  height: 50px;
+}
+
+.button-div{
+	width: 100%;
+}
+
+.connect-button1.col-sm-12{
+	margin-bottom: 5px;
+}
+
+.card{
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+}
+
+.card_holder{
+	/*border: 2px solid red;*/
+	max-width: 100%;
+}
+
+.container.you{
+	/*border: 2px solid blue;*/
+	max-width: 90%;
+	height: 90%;
+}

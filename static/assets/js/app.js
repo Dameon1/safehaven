@@ -38,3 +38,5 @@ var askForRide = function () {
 // getting data from the users from the website
 //====================================================================================
 //validate info 
+
+
