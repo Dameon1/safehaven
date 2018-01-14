@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-  crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
+
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ride Safe</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -22,37 +25,25 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Volunteering</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">Scheduling</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+          <a class="nav-link disabled" href="#">Partner Links</a>
+        <!-- </li>git -->
       </ul>
     </div>
   </nav>
-</div>
 
-<div class="container-fluid">
-	<div class="row">
-	    <div class="col-sm-12">
-	      <h1>Ride Safe</h1>
-	      <div>A safe, descrete, free ride in underserved communities</div>
-	    </div>
-	</div>
-	</br>
-	</br>
-	<div class="row">
-    	<div class="col-sm-12">
-    		<h2>Safe Ride FAQs</h2>
-    		</br>
-    		<h3>What is Ride Safe</h3>
-    		<p>Safe ride is an organinization that connects volunteer drivers and women who need transportion to and from abortion clinics in underserved states.</p>
-    		<h3>How safe is Ride Safe?</h3>
-    		<p>Safe Ride background checks and interviews volunteers before they are able to drive for you.</p>
-    	</div>
+  <!-- App information -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Ride Safe</h1>
+        <div>Offering a safe, and descrete, free ride to those in need of some understanding.</div>
+      </div>
     </div>
 
 
@@ -65,6 +56,16 @@
           Become a volunteer Driver
         </button> 
       </div>
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register-vol">
+      Apply to be a Volunteer Driver
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#apply-ride">
+      Schedule a Ride
+    </button>
+
+
+
     <!-- Applicant Form Modal -->
     <div class="modal fade" id="apply-ride" tabindex="-1" role="dialog" aria-labelledby="apply-ride" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -83,11 +84,11 @@
               </div>
               <div class="form-group">
                 <label for="apl-address">Address of Pick-Up</label>
-                <input type="text" class="form-control" id="apl-address"></input>
+                <input type="text" class="form-control" id="apl-address" placeholder="ex..123 Example St. City, ST">
               </div>
               <div class="form-group">
                 <label for="apl-date">Appointment Date</label>
-                <input type="date" class="form-control" id="apl-date"></input>
+                <input type="date" class="form-control" id="apl-date" >
               </div>
               <div class="form-group">
                 <label for="apl-time">Morning or Afternoon</label>
@@ -139,7 +140,7 @@
                 <label for="vol-email">Email Address</label>
                 <input type="text" class="form-control" id="vol-email" placeholder="name@example.com">
               </div>
-              
+
               <div class="form-group">
                 <label for="vol-phone">Phone Number</label>
                 <input type="number" class="form-control" id="vol-phone" placeholder="123-456-7890">
@@ -148,60 +149,60 @@
               <!-- Problem Here -->
               <label>Days You Can Volunteer</label>
               <div class="form-group">
-                <label class="form-check-label">Monday</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="mon-morn" >
+                <label class="form-check-label ml-md-3 h5">Monday</label>
+                <div class="form-check form-check-inline ml-md-5">
+                  <input class="form-check-input" type="checkbox" id="mon-morn">
                   <label class="form-check-label" for="mon-morn">Morning</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="mon-after" >
+                  <input class="form-check-input" type="checkbox" id="mon-after">
                   <label class="form-check-label" for="mon-after">Afternoon</label>
                 </div>
               </div>
               <div class="form-group">
-                <label class="form-check-label">Tuesday</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="tues-morn" >
+                <label class="form-check-label ml-md-3 h5">Tuesday</label>
+                <div class="form-check form-check-inline ml-md-5">
+                  <input class="form-check-input" type="checkbox" id="tues-morn">
                   <label class="form-check-label" for="tues-morn">Morning</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="tues-after" >
+                  <input class="form-check-input" type="checkbox" id="tues-after">
                   <label class="form-check-label" for="tues-after">Afternoon</label>
                 </div>
               </div>
               <div class="form-group">
-                <label class="form-check-label">Wednesday</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="wed-morn" >
+                <label class="form-check-label ml-md-3 h5">Wednesday</label>
+                <div class="form-check form-check-inline ml-md-5">
+                  <input class="form-check-input" type="checkbox" id="wed-morn">
                   <label class="form-check-label" for="wed-morn">Morning</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="wed-after" >
+                  <input class="form-check-input" type="checkbox" id="wed-after">
                   <label class="form-check-label" for="wed-after">Afternoon</label>
                 </div>
               </div>
               <div class="form-group">
-                <label class="form-check-label">Thursday</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="thurs-morn" >
+                <label class="form-check-label ml-md-3 h5">Thursday</label>
+                <div class="form-check form-check-inline ml-md-5">
+                  <input class="form-check-input" type="checkbox" id="thurs-morn">
                   <label class="form-check-label" for="thurs-morn">Morning</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="thurs-after" >
+                  <input class="form-check-input" type="checkbox" id="thurs-after">
                   <label class="form-check-label" for="thurs-after">Afternoon</label>
                 </div>
               </div>
               <div class="form-group">
-                  <label class="form-check-label">Friday</label>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="fri-morn" >
-                    <label class="form-check-label" for="fri-morn">Morning</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="fri-after" >
-                    <label class="form-check-label" for="fri-after">Afternoon</label>
-                  </div>
+                <label class="form-check-label ml-md-3 h5">Friday</label>
+                <div class="form-check form-check-inline ml-md-5">
+                  <input class="form-check-input" type="checkbox" id="fri-morn">
+                  <label class="form-check-label" for="fri-morn">Morning</label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="fri-after">
+                  <label class="form-check-label" for="fri-after">Afternoon</label>
+                </div>
+              </div>
 
             </form>
           </div>

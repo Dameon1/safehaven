@@ -1,0 +1,48 @@
+nav{
+	align-content: center;
+}
+div {
+	text-align: center;
+}
+.form-group {
+	text-align: left;
+}
+.form-check-inline {
+	float: right;
+}
+
+
+/*gives the background a light color*/
+body {
+	background-color: lightskyblue;
+}
+/* gives the buttons a little room */
+.btn {
+	margin: 3px;
+}
+
+
+/*link styling*/
+a {
+	text-decoration:none;
+	color:darkblue;
+	}
+  
+	
+	/*link effect*/
+  a:hover {
+	color: rgb(55, 143, 214);
+	}
+
+.drk-blue {
+	background-color: blue;
+}
+
+
+
+
+
+
+
+
+
