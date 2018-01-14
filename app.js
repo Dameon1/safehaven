@@ -10,7 +10,7 @@ var logger       = require('morgan')
 var session      = require('express-session')
 var SessionStore = require('express-nedb-session')(session)
 var compatible   = require('diet-connect')
-var serve        = require('express-static')
+var static        = require('diet-static')
 
 var models      = require('./lib/models')
 var drivers     = require('./lib/drivers')
@@ -35,7 +35,7 @@ app.header(compatible(session({
 
 app.header(auth.session)
 
-app.footer(compatible(serve(app.path + '/static')))
+app.footer(static({path: app.path + '/static'}))
 
 app.get('/', function ($) {
 	$.sendFile('index.html')
@@ -56,40 +56,55 @@ app.get('/login', function ($) {
 
 
 app.post('/schedule', function ($) {
-	console.log($.body)
 	const body = JSON.parse($.body)
 	const theDate = body.date
 	//const dayOfWeek = (new Date(theDate)).getDay()
 	//body.date = theDate.getTime()
 	// CREATE REQUEST
-	const rider = models.riders.create(body)
+	const rider = models.riders.create(body).save().then(function (rider) {
 
-	const matches = body.region.match(/([A-Z][A-Z])/)
-	if (matches) {
-		models.drivers.find({region: new RegExp(matches[1])}).then(function (drivers) {
-			drivers.forEach(driver => {
-				driver.requests.push({
-					date: 11111,
-					timeOfDay: body.timeOfDay,
-					region: body.region,
-					clinic: body.clinic,
-					rider: rider._id
+		const matches = body.region.match(/([A-Z][A-Z])/)
+
+		if (matches) {
+			models.drivers.find({region: new RegExp(matches[1])}).then(function (drivers_) {
+				drivers_.forEach(driver => {
+					drivers.addRequest(driver, {
+						date: "2018-02-09",
+						timeOfDay: rider.timeOfDay,
+						region: rider.region,
+						clinic: rider.clinic,
+						rider: rider._id
+					})
+					$.end('thanks')
 				})
-				driver.save()
 			})
-		})
-	}
-	
-	$.end('thanks')
+		}
+
+	})
+	.catch(function (err) {
+		console.log('12345')
+		console.log(err)
+	})
 })
 
 app.post('/register', function ($) {
 	const body = JSON.parse($.body)
+	// register new driver
 	drivers.register(body, function (err) {
-		console.log(err)
+		//console.log(err)
 		$.end('thanks')
 	})
-	// register new driver
+})
+
+app.get('/confirm/:hash', function ($) {
+	drivers.acceptRequest($.params.hash)
+	$.end('Confirmed!')
+})
+
+
+app.get('/reject/:hash', function ($) {
+	drivers.acceptRequest($.params.hash)
+	$.end('Maybe next time')
 })
 
 module.exports = app
