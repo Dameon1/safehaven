@@ -35,6 +35,13 @@ var askForRide = function () {
   }).then(fuck => console.log(fuck, 'you'))
 }
 
+$("#submitApplicant").on("click", askForRide());
+
+$("#volunteerSubmit").on("click", registerVolunteer());
+
+
+
+
 // getting data from the users from the website
 //====================================================================================
 //validate info 

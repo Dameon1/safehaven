@@ -61,21 +61,22 @@
             <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
               <div class="card-body">
                 <h5 class="card-title">Who we are</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">A group of caring volunteers that understand being without the ability to get to and from
+                  the proper medical care can be a burden.</p>
               </div>
             </div>
 
             <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
               <div class="card-body">
                 <h5 class="card-title">What we trying to do</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Helping connect volunteers with applicants that need help travelling to and from an early termination.</p>
               </div>
             </div>
 
             <div class="card bg-light mb-3 col-lg-4" style="max-width: 30rem;">
               <div class="card-body">
                 <h5 class="card-title">Why we are doing it</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">To give every woman the ability to get medical care, regardless of distance and lack of transportation.</p>
               </div>
             </div>
             </div>
@@ -94,15 +95,13 @@
             <div class="row">
               <div class="button-div">
                   <button type="button" class="btn btn-lg connect-button1 col-sm-12 col-lg-5" data-toggle="modal" data-target="#apply-ride">Connect with Driver</button>
-                  <button type="button" class="btn btn-lg connect-button2 col-sm-12 col-lg-5">Connect with Rider</button>
+                  <a href="drivers.html"><button type="button" class="btn btn-lg connect-button2 col-sm-12 col-lg-5">Connect with Rider</button></a> 
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
 
         <!-- Applicant Form Modal -->
     <div class="modal fade" id="apply-ride" tabindex="-1" role="dialog" aria-labelledby="apply-ride" aria-hidden="true">
@@ -145,7 +144,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Connect</button>
+            <button id="submitApplicant" type="button" class="btn btn-primary">Connect</button>
           </div>
         </div>
       </div>
@@ -216,6 +215,14 @@
 		<!-- app.js -->
     <script src="js/app.js"></script>
 
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="vendor/axios.js"></script>	  
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
 
 </html>
