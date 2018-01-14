@@ -1,0 +1,23 @@
+nav{
+	align-content: center;
+}
+div {
+	text-align: center;
+}
+
+#footer{
+	border-top: 1px,;
+	border-style: solid;
+	background-color: 01556E !important;
+	padding: 50px;
+}
+
+.form-group {
+	text-align: left;
+}
+
+button{
+	background-color: 01556E;
+}
+
+ 
