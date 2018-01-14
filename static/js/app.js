@@ -45,7 +45,7 @@ var askForRide = function () {
   })
 }
 
-$("#submitApplicant").on("click", askForRide);
+$("#submitApplicant").on("click", askForRide).on("click", function() {$('#apply-ride').modal('hide')});
 
 //add main page redirect for volunteers using  window.location.href
 $("#volunteerSubmit").on("click", registerVolunteer);
